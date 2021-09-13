@@ -5,10 +5,7 @@
 
 <body>
     <article>
-        <h1><a href="post">My First Post</a></h1>
-        <p>
-            Lorem ipsum
-        </p>
+        <?= $post; ?>
     </article>
 
     <a href="/">Go Back</a>
