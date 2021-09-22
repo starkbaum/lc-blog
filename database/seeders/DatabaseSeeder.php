@@ -25,6 +25,11 @@ class DatabaseSeeder extends Seeder
             'user_id' => $ken->id,
         ]);
 
+        $category = Category::factory()->create([
+            'name' => 'Tokyo',
+            'slug' => 'tokyo'
+        ]);
+
         $touka = User::factory()->create([
             'username' => 'Touka',
             'name' => 'Touka Kirishima',
@@ -32,6 +37,7 @@ class DatabaseSeeder extends Seeder
 
         Post::factory(5)->create([
             'user_id' => $touka->id,
+            'category_id' => $category->id,
         ]);
     }
 }

@@ -14,6 +14,8 @@ class Post extends Model
 
     protected $guarded = [];
 
+    protected $with = ['author', 'category'];
+
     public function getRouteKeyName()
     {
         return 'slug';
